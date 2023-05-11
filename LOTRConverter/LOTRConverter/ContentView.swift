@@ -10,43 +10,72 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            // TODO: Background image
+            Image("background")
+                .resizable()
+                .edgesIgnoringSafeArea(.all)
             
             VStack {
-                // TODO: Prancing pony image
+                Image("prancingpony")
+                    .resizable()
+                    .scaledToFit() // Allows us to omit width below
+                    .frame(height: 200)
                 
-                // TODO: Currecy exchange text
+                Text("Currency Exchange")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
                 
-                // TODO: Currency conversion
                 HStack {
-                    // TODO: Left conversion
                     VStack {
-                        // TODO: Currency
                         HStack {
-                            // TODO: Currency image
+                            Image("silverpiece")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 33)
                             
-                            // TODO: Currency text
+                            Text("Silver Piece")
+                                .font(.headline)
+                                .foregroundColor(.white)
                         }
                         
-                        // TODO: Text
+                        Text("Text Field") // TODO: Update to a user text field
                     }
                     
-                    // TODO: Equal
+                    Image(systemName: "equal")
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
                     
-                    // TODO: Right conversion
                     VStack {
-                        // TODO: Currency
                         HStack {
-                            // TODO: Currency text
+                            Text("Gold Piece")
+                                .font(.headline)
+                                .foregroundColor(.white)
                             
-                            // TODO: Currency image
+                            Image("goldpiece")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 33)
                         }
                         
-                        // TODO: Text
+                        Text("Text Field") // TODO: Update to a user text field
                     }
                 }
                 
-                // TODO: Info button
+                Spacer()
+                
+                HStack {
+                    Spacer()
+                    
+                    Button {
+                        print("info tapped") // TODO: Set action
+                    } label: {
+                        Image(systemName: "info.circle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 33)
+                            .foregroundColor(.white)
+                    }
+                    .padding()
+                }
             }
         }
     }
