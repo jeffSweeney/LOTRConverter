@@ -15,6 +15,8 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
+                Spacer()
+                
                 Image("prancingpony")
                     .resizable()
                     .scaledToFit() // Allows us to omit width below
