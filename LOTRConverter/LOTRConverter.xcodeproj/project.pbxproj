@@ -94,10 +94,8 @@
 		E00B6EBA2A0D8DC400AA35D3 /* LOTRConverter */ = {
 			isa = PBXGroup;
 			children = (
-				E00B6EBB2A0D8DC400AA35D3 /* LOTRConverterApp.swift */,
-				E00B6EBD2A0D8DC400AA35D3 /* ContentView.swift */,
-				E00B6EBF2A0D8DC500AA35D3 /* Assets.xcassets */,
-				E00B6EC12A0D8DC500AA35D3 /* Preview Content */,
+				E00B6EE82A10083E00AA35D3 /* Views */,
+				E00B6EE72A10082500AA35D3 /* MiscAppFiles */,
 			);
 			path = LOTRConverter;
 			sourceTree = "<group>";
@@ -125,6 +123,24 @@
 				E00B6ED82A0D8DC500AA35D3 /* LOTRConverterUITestsLaunchTests.swift */,
 			);
 			path = LOTRConverterUITests;
+			sourceTree = "<group>";
+		};
+		E00B6EE72A10082500AA35D3 /* MiscAppFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E00B6EBB2A0D8DC400AA35D3 /* LOTRConverterApp.swift */,
+				E00B6EBF2A0D8DC500AA35D3 /* Assets.xcassets */,
+				E00B6EC12A0D8DC500AA35D3 /* Preview Content */,
+			);
+			name = MiscAppFiles;
+			sourceTree = "<group>";
+		};
+		E00B6EE82A10083E00AA35D3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E00B6EBD2A0D8DC400AA35D3 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
