@@ -14,6 +14,7 @@
 		E00B6ECD2A0D8DC500AA35D3 /* LOTRConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B6ECC2A0D8DC500AA35D3 /* LOTRConverterTests.swift */; };
 		E00B6ED72A0D8DC500AA35D3 /* LOTRConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B6ED62A0D8DC500AA35D3 /* LOTRConverterUITests.swift */; };
 		E00B6ED92A0D8DC500AA35D3 /* LOTRConverterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B6ED82A0D8DC500AA35D3 /* LOTRConverterUITestsLaunchTests.swift */; };
+		E00B6EEA2A10085F00AA35D3 /* ExchangeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B6EE92A10085F00AA35D3 /* ExchangeInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		E00B6ED22A0D8DC500AA35D3 /* LOTRConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LOTRConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E00B6ED62A0D8DC500AA35D3 /* LOTRConverterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOTRConverterUITests.swift; sourceTree = "<group>"; };
 		E00B6ED82A0D8DC500AA35D3 /* LOTRConverterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOTRConverterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E00B6EE92A10085F00AA35D3 /* ExchangeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				E00B6EBD2A0D8DC400AA35D3 /* ContentView.swift */,
+				E00B6EE92A10085F00AA35D3 /* ExchangeInfo.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E00B6EEA2A10085F00AA35D3 /* ExchangeInfo.swift in Sources */,
 				E00B6EBE2A0D8DC400AA35D3 /* ContentView.swift in Sources */,
 				E00B6EBC2A0D8DC400AA35D3 /* LOTRConverterApp.swift in Sources */,
 			);
