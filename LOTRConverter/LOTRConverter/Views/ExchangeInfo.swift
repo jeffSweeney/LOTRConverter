@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+fileprivate typealias ExchangeInfoStrings = LOTRConverterStrings.ExchangeInfo
+fileprivate typealias ExchangeRateStrings = LOTRConverterStrings.ExchangeRate
+
 // MARK: - View
 struct ExchangeInfo: View {
     var body: some View {
@@ -17,21 +20,21 @@ struct ExchangeInfo: View {
                 .ignoresSafeArea()
             
             ScrollView {
-                Text(Self.title)
+                Text(ExchangeInfoStrings.title)
                     .font(.largeTitle)
                     .padding(.top, 50)
                     .padding(.bottom, 25)
                 
-                Text(Self.infoDescription)
+                Text(ExchangeInfoStrings.infoDescription)
                     .font(.body)
                     .multilineTextAlignment(.center)
                     .padding([.leading, .trailing], 125)
                 
                 VStack {
-                    ExchangeInfoRow(fromImage: Image("goldpiece"), exchangeInfo: Self.goldPieceToGoldPenny, toImage: Image("goldpenny"))
-                    ExchangeInfoRow(fromImage: Image("goldpenny"), exchangeInfo: Self.goldPennyToSilverPiece, toImage: Image("silverpiece"))
-                    ExchangeInfoRow(fromImage: Image("silverpiece"), exchangeInfo: Self.silverPieceToSilverPenny, toImage: Image("silverpenny"))
-                    ExchangeInfoRow(fromImage: Image("silverpenny"), exchangeInfo: Self.silverPennyToCopperPenny, toImage: Image("copperpenny"))
+                    ExchangeInfoRow(fromImage: Image("goldpiece"), exchangeInfo: ExchangeRateStrings.goldPieceToGoldPenny, toImage: Image("goldpenny"))
+                    ExchangeInfoRow(fromImage: Image("goldpenny"), exchangeInfo: ExchangeRateStrings.goldPennyToSilverPiece, toImage: Image("silverpiece"))
+                    ExchangeInfoRow(fromImage: Image("silverpiece"), exchangeInfo: ExchangeRateStrings.silverPieceToSilverPenny, toImage: Image("silverpenny"))
+                    ExchangeInfoRow(fromImage: Image("silverpenny"), exchangeInfo: ExchangeRateStrings.silverPennyToCopperPenny, toImage: Image("copperpenny"))
                 }
                 .padding([.top, .bottom], 25)
                 
@@ -71,16 +74,6 @@ struct ExchangeInfo: View {
             }
         }
     }
-}
-
-// MARK: - Strings
-extension ExchangeInfo {
-    static let title = "Exchange Rates"
-    static let infoDescription = "Here at the Prancing Pony, we are happy to offer you a place where you can exchange all the known currencies in the entire world, except one. We used to take Brandy Bucks, but after finding out that it was a person instead of a piece of paper, we realized it had no value to us. Below is a simple guide to our currency exchange rates:"
-    static let goldPieceToGoldPenny = "1 Gold Piece = 4 Gold Pennies"
-    static let goldPennyToSilverPiece = "1 Gold Penny = 4 Silver Pieces"
-    static let silverPieceToSilverPenny = "1 Silver Piece = 4 Silver Pennies"
-    static let silverPennyToCopperPenny = "1 Silver Penny = 100 Copper Pennies"
 }
 
 // MARK: - Previews
