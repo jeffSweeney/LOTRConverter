@@ -19,4 +19,17 @@ struct LOTRConverterStrings {
         static let silverPieceToSilverPenny = "1 Silver Piece = 4 Silver Pennies"
         static let silverPennyToCopperPenny = "1 Silver Penny = 100 Copper Pennies"
     }
+    
+    struct SelectCurrency {
+        static let convertFrom = "Select the currency you are starting with:"
+        static let convertTo = "Select the currency you would like to convert to:"
+    }
+    
+    struct Currencies {
+        static let copperPenny = "Copper Penny"
+        static let silverPenny = "Silver Penny"
+        static let silverPiece = "Silver Piece"
+        static let goldPenny = "Gold Penny"
+        static let goldPiece = "Gold Piece"
+    }
 }
