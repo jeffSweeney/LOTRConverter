@@ -31,10 +31,10 @@ struct ExchangeInfo: View {
                     .padding([.leading, .trailing], 125)
                 
                 VStack {
-                    ExchangeInfoRow(fromImage: Image("goldpiece"), exchangeInfo: ExchangeRateStrings.goldPieceToGoldPenny, toImage: Image("goldpenny"))
-                    ExchangeInfoRow(fromImage: Image("goldpenny"), exchangeInfo: ExchangeRateStrings.goldPennyToSilverPiece, toImage: Image("silverpiece"))
-                    ExchangeInfoRow(fromImage: Image("silverpiece"), exchangeInfo: ExchangeRateStrings.silverPieceToSilverPenny, toImage: Image("silverpenny"))
-                    ExchangeInfoRow(fromImage: Image("silverpenny"), exchangeInfo: ExchangeRateStrings.silverPennyToCopperPenny, toImage: Image("copperpenny"))
+                    ExchangeRate(fromImage: Image("goldpiece"), exchangeInfo: ExchangeRateStrings.goldPieceToGoldPenny, toImage: Image("goldpenny"))
+                    ExchangeRate(fromImage: Image("goldpenny"), exchangeInfo: ExchangeRateStrings.goldPennyToSilverPiece, toImage: Image("silverpiece"))
+                    ExchangeRate(fromImage: Image("silverpiece"), exchangeInfo: ExchangeRateStrings.silverPieceToSilverPenny, toImage: Image("silverpenny"))
+                    ExchangeRate(fromImage: Image("silverpenny"), exchangeInfo: ExchangeRateStrings.silverPennyToCopperPenny, toImage: Image("copperpenny"))
                 }
                 .padding([.top, .bottom], 25)
                 
@@ -50,29 +50,6 @@ struct ExchangeInfo: View {
             .padding(.bottom, 25)
         }
         .background(Color(.systemBrown))
-    }
-    
-    // MARK: - Sub View
-    private struct ExchangeInfoRow: View {
-        let fromImage: Image
-        let exchangeInfo: String
-        let toImage: Image
-        
-        var body: some View {
-            HStack {
-                fromImage
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 33)
-                
-                Text(exchangeInfo)
-                
-                toImage
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 33)
-            }
-        }
     }
 }
 
