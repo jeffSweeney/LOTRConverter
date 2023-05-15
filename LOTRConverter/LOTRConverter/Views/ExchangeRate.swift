@@ -8,13 +8,31 @@
 import SwiftUI
 
 struct ExchangeRate: View {
+    let fromImage: Image
+    let exchangeInfo: String
+    let toImage: Image
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            fromImage
+                .resizable()
+                .scaledToFit()
+                .frame(height: 33)
+            
+            Text(exchangeInfo)
+            
+            toImage
+                .resizable()
+                .scaledToFit()
+                .frame(height: 33)
+        }
     }
 }
 
 struct ExchangeRate_Previews: PreviewProvider {
     static var previews: some View {
-        ExchangeRate()
+        ExchangeRate(fromImage: Image("goldpiece"),
+                     exchangeInfo: LOTRConverterStrings.ExchangeRate.goldPieceToGoldPenny,
+                     toImage: Image("goldpenny"))
     }
 }
