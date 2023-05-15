@@ -34,5 +34,6 @@ struct ExchangeRate_Previews: PreviewProvider {
         ExchangeRate(fromImage: Image("goldpiece"),
                      exchangeInfo: LOTRConverterStrings.ExchangeRate.goldPieceToGoldPenny,
                      toImage: Image("goldpenny"))
+        .previewLayout(.sizeThatFits)
     }
 }
