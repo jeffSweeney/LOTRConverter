@@ -12,6 +12,8 @@ fileprivate typealias ExchangeRateStrings = LOTRConverterStrings.ExchangeRate
 
 // MARK: - View
 struct ExchangeInfo: View {
+    @Environment(\.dismiss) var dismissPage
+    
     var body: some View {
         ZStack {
             Image("parchment")
@@ -39,7 +41,7 @@ struct ExchangeInfo: View {
                 .padding([.top, .bottom], 25)
                 
                 Button("Done") {
-                    print("TODO: - Implement Done Button")
+                    dismissPage()
                 }
                 .padding()
                 .background(Color(.systemBrown).opacity(0.75))
@@ -50,6 +52,7 @@ struct ExchangeInfo: View {
             .padding(.bottom, 25)
         }
         .background(Color(.systemBrown))
+        .foregroundColor(.black) // i.e. not supporting dark mode
     }
 }
 
