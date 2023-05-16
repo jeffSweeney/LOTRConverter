@@ -9,7 +9,26 @@ import SwiftUI
 
 struct SelectCurrency: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Image("parchment")
+                .resizable()
+                .edgesIgnoringSafeArea(.all)
+                .background(.brown)
+            
+            VStack {
+                Text(LOTRConverterStrings.SelectCurrency.convertFrom)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                
+                SelectCurrencyOptions()
+                
+                Text(LOTRConverterStrings.SelectCurrency.convertTo)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                
+                SelectCurrencyOptions()
+            }
+        }
     }
 }
 

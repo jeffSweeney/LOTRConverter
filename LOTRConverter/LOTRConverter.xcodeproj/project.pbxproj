@@ -17,6 +17,9 @@
 		E00B6EEA2A10085F00AA35D3 /* ExchangeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B6EE92A10085F00AA35D3 /* ExchangeInfo.swift */; };
 		E00B6EEC2A1280AD00AA35D3 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B6EEB2A1280AD00AA35D3 /* ExchangeRate.swift */; };
 		E00B6EEF2A12864900AA35D3 /* LOTRConverterStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B6EEE2A12864900AA35D3 /* LOTRConverterStrings.swift */; };
+		E00B6EF12A12CA5400AA35D3 /* SelectCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B6EF02A12CA5400AA35D3 /* SelectCurrency.swift */; };
+		E00B6EF32A12D14300AA35D3 /* SelectCurrencyOptionsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B6EF22A12D14300AA35D3 /* SelectCurrencyOptionsTab.swift */; };
+		E0B1D8092A13EDDB0028C035 /* SelectCurrencyOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B1D8082A13EDDB0028C035 /* SelectCurrencyOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		E00B6EE92A10085F00AA35D3 /* ExchangeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeInfo.swift; sourceTree = "<group>"; };
 		E00B6EEB2A1280AD00AA35D3 /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 		E00B6EEE2A12864900AA35D3 /* LOTRConverterStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOTRConverterStrings.swift; sourceTree = "<group>"; };
+		E00B6EF02A12CA5400AA35D3 /* SelectCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrency.swift; sourceTree = "<group>"; };
+		E00B6EF22A12D14300AA35D3 /* SelectCurrencyOptionsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyOptionsTab.swift; sourceTree = "<group>"; };
+		E0B1D8082A13EDDB0028C035 /* SelectCurrencyOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,9 @@
 				E00B6EBD2A0D8DC400AA35D3 /* ContentView.swift */,
 				E00B6EE92A10085F00AA35D3 /* ExchangeInfo.swift */,
 				E00B6EEB2A1280AD00AA35D3 /* ExchangeRate.swift */,
+				E00B6EF02A12CA5400AA35D3 /* SelectCurrency.swift */,
+				E0B1D8082A13EDDB0028C035 /* SelectCurrencyOptions.swift */,
+				E00B6EF22A12D14300AA35D3 /* SelectCurrencyOptionsTab.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -294,7 +303,10 @@
 				E00B6EEA2A10085F00AA35D3 /* ExchangeInfo.swift in Sources */,
 				E00B6EBE2A0D8DC400AA35D3 /* ContentView.swift in Sources */,
 				E00B6EEF2A12864900AA35D3 /* LOTRConverterStrings.swift in Sources */,
+				E00B6EF12A12CA5400AA35D3 /* SelectCurrency.swift in Sources */,
+				E0B1D8092A13EDDB0028C035 /* SelectCurrencyOptions.swift in Sources */,
 				E00B6EBC2A0D8DC400AA35D3 /* LOTRConverterApp.swift in Sources */,
+				E00B6EF32A12D14300AA35D3 /* SelectCurrencyOptionsTab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
