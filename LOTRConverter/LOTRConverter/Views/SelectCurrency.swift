@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SelectCurrency: View {
+    @Environment(\.dismiss) var dismissPage
+    
     var body: some View {
         ZStack {
             Image("parchment")
@@ -21,12 +23,23 @@ struct SelectCurrency: View {
                     .multilineTextAlignment(.center)
                 
                 SelectCurrencyOptions()
+                    .padding(.bottom, 30)
                 
                 Text(LOTRConverterStrings.SelectCurrency.convertTo)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                 
                 SelectCurrencyOptions()
+                    .padding(.bottom, 30)
+                
+                Button("Done") {
+                    dismissPage()
+                }
+                .padding()
+                .background(Color(.systemBrown).opacity(0.75))
+                .font(.title)
+                .foregroundColor(.white)
+                .cornerRadius(25)
             }
         }
     }
