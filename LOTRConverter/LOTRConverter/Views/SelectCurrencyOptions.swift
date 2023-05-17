@@ -8,17 +8,15 @@
 import SwiftUI
 
 struct SelectCurrencyOptions: View {
+    @State var gridLayout = [GridItem(), GridItem(), GridItem()]
+    @State var icons: [LOTRConverterStrings.Currency] = [
+        .copperPenny, .silverPenny, .silverPiece, .goldPenny, .goldPiece
+    ]
+    
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                SelectCurrencyOptionsTab(currency: .copperPenny)
-                SelectCurrencyOptionsTab(currency: .silverPenny)
-                SelectCurrencyOptionsTab(currency: .silverPiece)
-            }
-            
-            HStack() {
-                SelectCurrencyOptionsTab(currency: .goldPenny)
-                SelectCurrencyOptionsTab(currency: .goldPiece)
+        LazyVGrid(columns: gridLayout) {
+            ForEach(icons, id: \.hashValue) { currency in
+                SelectCurrencyOptionsTab(currency: currency)
             }
         }
     }
