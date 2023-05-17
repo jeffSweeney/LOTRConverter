@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-enum Currency: String {
-    case copperPenny = "Copper Penny"
-    case silverPenny = "Silver Penny"
-    case silverPiece = "Silver Piece"
-    case goldPenny = "Gold Penny"
-    case goldPiece = "Gold Piece"
+enum Currency: Double, CaseIterable {
+    case copperPenny = 640
+    case silverPenny = 64
+    case silverPiece = 16
+    case goldPenny = 4
+    case goldPiece = 1
     
     var image: Image {
         switch self {
@@ -26,6 +26,21 @@ enum Currency: String {
             return Image("goldpenny")
         case .goldPiece:
             return Image("goldpiece")
+        }
+    }
+    
+    var title: String {
+        switch self {
+        case .copperPenny:
+            return "Copper Penny"
+        case .silverPenny:
+            return "Silver Penny"
+        case .silverPiece:
+            return "Silver Piece"
+        case .goldPenny:
+            return "Gold Penny"
+        case .goldPiece:
+            return "Gold Piece"
         }
     }
 }
