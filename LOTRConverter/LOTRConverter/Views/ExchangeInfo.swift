@@ -33,10 +33,10 @@ struct ExchangeInfo: View {
                     .padding([.leading, .trailing], 125)
                 
                 VStack {
-                    ExchangeRate(fromImage: Image("goldpiece"), exchangeInfo: ExchangeRateStrings.goldPieceToGoldPenny, toImage: Image("goldpenny"))
-                    ExchangeRate(fromImage: Image("goldpenny"), exchangeInfo: ExchangeRateStrings.goldPennyToSilverPiece, toImage: Image("silverpiece"))
-                    ExchangeRate(fromImage: Image("silverpiece"), exchangeInfo: ExchangeRateStrings.silverPieceToSilverPenny, toImage: Image("silverpenny"))
-                    ExchangeRate(fromImage: Image("silverpenny"), exchangeInfo: ExchangeRateStrings.silverPennyToCopperPenny, toImage: Image("copperpenny"))
+                    ExchangeRate(fromCurrency: .goldPiece, exchangeInfo: ExchangeRateStrings.goldPieceToGoldPenny, toCurrency: .goldPenny)
+                    ExchangeRate(fromCurrency: .goldPenny, exchangeInfo: ExchangeRateStrings.goldPennyToSilverPiece, toCurrency: .silverPiece)
+                    ExchangeRate(fromCurrency: .silverPiece, exchangeInfo: ExchangeRateStrings.silverPieceToSilverPenny, toCurrency: .silverPenny)
+                    ExchangeRate(fromCurrency: .silverPenny, exchangeInfo: ExchangeRateStrings.silverPennyToCopperPenny, toCurrency: .copperPenny)
                 }
                 .padding([.top, .bottom], 25)
                 

@@ -7,20 +7,18 @@
 
 import SwiftUI
 
-fileprivate typealias Currencies = LOTRConverterStrings.Currencies
-
 struct SelectCurrencyOptions: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                SelectCurrencyOptionsTab(currencyImage: Image("copperpenny"), currencyName: Currencies.copperPenny)
-                SelectCurrencyOptionsTab(currencyImage: Image("silverpenny"), currencyName: Currencies.silverPenny)
-                SelectCurrencyOptionsTab(currencyImage: Image("silverpiece"), currencyName: Currencies.silverPiece)
+                SelectCurrencyOptionsTab(currency: .copperPenny)
+                SelectCurrencyOptionsTab(currency: .silverPenny)
+                SelectCurrencyOptionsTab(currency: .silverPiece)
             }
             
             HStack() {
-                SelectCurrencyOptionsTab(currencyImage: Image("goldpenny"), currencyName: Currencies.goldPenny)
-                SelectCurrencyOptionsTab(currencyImage: Image("goldpiece"), currencyName: Currencies.goldPiece)
+                SelectCurrencyOptionsTab(currency: .goldPenny)
+                SelectCurrencyOptionsTab(currency: .goldPiece)
             }
         }
     }

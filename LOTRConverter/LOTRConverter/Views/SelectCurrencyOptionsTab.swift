@@ -7,24 +7,24 @@
 
 import SwiftUI
 
+typealias Currency = LOTRConverterStrings.Currency
 fileprivate let colorTheme = Color(.systemBrown)
 
 struct SelectCurrencyOptionsTab: View {
-    let currencyImage: Image
-    let currencyName: String
+    let currency: Currency
     
     var body: some View {
        ZStack(alignment: .bottom) {
-            Rectangle()
-                .foregroundColor(colorTheme)
-                .cornerRadius(22)
+           Rectangle()
+               .foregroundColor(colorTheme)
+               .cornerRadius(22)
                             
-            currencyImage
+           currency.image
                 .resizable()
                 .scaledToFit()
                 .padding(.all, 5)
             
-           Text(currencyName)
+           Text(currency.rawValue)
                .background(colorTheme.opacity(0.75))
                .font(.caption2)
                .padding(.bottom, 5)
@@ -36,10 +36,10 @@ struct SelectCurrencyOptionsTab: View {
 struct SelectCurrencyOptionsTab_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SelectCurrencyOptionsTab(currencyImage: Image("copperpenny"), currencyName: "Copper Penny")
+            SelectCurrencyOptionsTab(currency: .copperPenny)
                 .previewLayout(.sizeThatFits)
             
-            SelectCurrencyOptionsTab(currencyImage: Image("goldpiece"), currencyName: "Gold Piece")
+            SelectCurrencyOptionsTab(currency: .goldPiece)
                 .previewLayout(.sizeThatFits)
         }
     }

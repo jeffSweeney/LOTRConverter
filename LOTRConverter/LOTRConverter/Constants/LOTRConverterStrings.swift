@@ -5,7 +5,7 @@
 //  Created by Jeffrey Sweeney on 5/15/23.
 //
 
-import Foundation
+import SwiftUI
 
 struct LOTRConverterStrings {
     struct ExchangeInfo {
@@ -25,11 +25,26 @@ struct LOTRConverterStrings {
         static let convertTo = "Select the currency you would like to convert to:"
     }
     
-    struct Currencies {
-        static let copperPenny = "Copper Penny"
-        static let silverPenny = "Silver Penny"
-        static let silverPiece = "Silver Piece"
-        static let goldPenny = "Gold Penny"
-        static let goldPiece = "Gold Piece"
+    enum Currency: String {
+        case copperPenny = "Copper Penny"
+        case silverPenny = "Silver Penny"
+        case silverPiece = "Silver Piece"
+        case goldPenny = "Gold Penny"
+        case goldPiece = "Gold Piece"
+        
+        var image: Image {
+            switch self {
+            case .copperPenny:
+                return Image("copperpenny")
+            case .silverPenny:
+                return Image("silverpenny")
+            case .silverPiece:
+                return Image("silverpiece")
+            case .goldPenny:
+                return Image("goldpenny")
+            case .goldPiece:
+                return Image("goldpiece")
+            }
+        }
     }
 }
