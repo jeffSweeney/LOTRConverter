@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-typealias Currency = LOTRConverterStrings.Currency
 fileprivate let colorTheme = Color(.systemBrown)
 
 struct SelectCurrencyOptionsTab: View {

@@ -7,12 +7,10 @@
 
 import SwiftUI
 
-typealias constants = LOTRConverterStrings
-
 struct ExchangeRate: View {
-    let fromCurrency: constants.Currency
+    let fromCurrency: Currency
     let exchangeInfo: String
-    let toCurrency: constants.Currency
+    let toCurrency: Currency
     
     var body: some View {
         HStack {
@@ -33,9 +31,9 @@ struct ExchangeRate: View {
 
 struct ExchangeRate_Previews: PreviewProvider {
     static var previews: some View {
-        ExchangeRate(fromCurrency: constants.Currency.goldPiece,
+        ExchangeRate(fromCurrency: Currency.goldPiece,
                      exchangeInfo: LOTRConverterStrings.ExchangeRate.goldPieceToGoldPenny,
-                     toCurrency: constants.Currency.goldPenny)
+                     toCurrency: Currency.goldPenny)
         .previewLayout(.sizeThatFits)
     }
 }

@@ -24,27 +24,4 @@ struct LOTRConverterStrings {
         static let convertFrom = "Select the currency you are starting with:"
         static let convertTo = "Select the currency you would like to convert to:"
     }
-    
-    enum Currency: String {
-        case copperPenny = "Copper Penny"
-        case silverPenny = "Silver Penny"
-        case silverPiece = "Silver Piece"
-        case goldPenny = "Gold Penny"
-        case goldPiece = "Gold Piece"
-        
-        var image: Image {
-            switch self {
-            case .copperPenny:
-                return Image("copperpenny")
-            case .silverPenny:
-                return Image("silverpenny")
-            case .silverPiece:
-                return Image("silverpiece")
-            case .goldPenny:
-                return Image("goldpenny")
-            case .goldPiece:
-                return Image("goldpiece")
-            }
-        }
-    }
 }

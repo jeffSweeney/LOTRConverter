@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SelectCurrencyOptions: View {
     @State var gridLayout = [GridItem(), GridItem(), GridItem()]
-    @State var icons: [LOTRConverterStrings.Currency] = [
+    @State var icons: [Currency] = [
         .copperPenny, .silverPenny, .silverPiece, .goldPenny, .goldPiece
     ]
     

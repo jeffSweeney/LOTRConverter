@@ -20,6 +20,7 @@
 		E00B6EF12A12CA5400AA35D3 /* SelectCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B6EF02A12CA5400AA35D3 /* SelectCurrency.swift */; };
 		E00B6EF32A12D14300AA35D3 /* SelectCurrencyOptionsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B6EF22A12D14300AA35D3 /* SelectCurrencyOptionsTab.swift */; };
 		E0B1D8092A13EDDB0028C035 /* SelectCurrencyOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B1D8082A13EDDB0028C035 /* SelectCurrencyOptions.swift */; };
+		E0B1D80E2A145E7E0028C035 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B1D80D2A145E7E0028C035 /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		E00B6EF02A12CA5400AA35D3 /* SelectCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrency.swift; sourceTree = "<group>"; };
 		E00B6EF22A12D14300AA35D3 /* SelectCurrencyOptionsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyOptionsTab.swift; sourceTree = "<group>"; };
 		E0B1D8082A13EDDB0028C035 /* SelectCurrencyOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyOptions.swift; sourceTree = "<group>"; };
+		E0B1D80D2A145E7E0028C035 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				E00B6EE82A10083E00AA35D3 /* Views */,
+				E0B1D80C2A145DFD0028C035 /* Models */,
 				E00B6EED2A12860A00AA35D3 /* Constants */,
 				E00B6EE72A10082500AA35D3 /* MiscAppFiles */,
 			);
@@ -167,6 +170,14 @@
 				E00B6EEE2A12864900AA35D3 /* LOTRConverterStrings.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		E0B1D80C2A145DFD0028C035 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0B1D80D2A145E7E0028C035 /* Currency.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0B1D80E2A145E7E0028C035 /* Currency.swift in Sources */,
 				E00B6EEC2A1280AD00AA35D3 /* ExchangeRate.swift in Sources */,
 				E00B6EEA2A10085F00AA35D3 /* ExchangeInfo.swift in Sources */,
 				E00B6EBE2A0D8DC400AA35D3 /* ContentView.swift in Sources */,
