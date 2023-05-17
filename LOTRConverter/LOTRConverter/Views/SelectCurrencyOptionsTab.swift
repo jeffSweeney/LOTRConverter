@@ -24,10 +24,10 @@ struct SelectCurrencyOptionsTab: View {
                 .scaledToFit()
                 .padding(.all, 5)
             
-            Text(currencyName)
-                .background(colorTheme)
-                .font(.caption2)
-                .padding(.bottom, 5)
+           Text(currencyName)
+               .background(colorTheme.opacity(0.75))
+               .font(.caption2)
+               .padding(.bottom, 5)
         }
         .frame(width: 100, height: 100)
     }
