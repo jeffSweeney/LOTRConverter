@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SelectCurrency: View {
     @Environment(\.dismiss) var dismissPage
+    @Binding var leftCurrency: Currency
+    @Binding var rightCurrency: Currency
     
     var body: some View {
         ZStack {
@@ -22,15 +24,15 @@ struct SelectCurrency: View {
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                 
-                SelectCurrencyOptions()
-                    .padding(.bottom, 20)
+                SelectCurrencyOptions(selectedCurrency: $leftCurrency)
+                    .padding([.bottom, .leading, .trailing])
                 
                 Text(LOTRConverterStrings.SelectCurrency.convertTo)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                 
-                SelectCurrencyOptions()
-                    .padding(.bottom, 20)
+                SelectCurrencyOptions(selectedCurrency: $rightCurrency)
+                    .padding([.bottom, .leading, .trailing])
                 
                 Button("Done") {
                     dismissPage()
@@ -47,6 +49,6 @@ struct SelectCurrency: View {
 
 struct SelectCurrency_Previews: PreviewProvider {
     static var previews: some View {
-        SelectCurrency()
+        SelectCurrency(leftCurrency: .constant(.goldPenny), rightCurrency: .constant(.goldPiece))
     }
 }
