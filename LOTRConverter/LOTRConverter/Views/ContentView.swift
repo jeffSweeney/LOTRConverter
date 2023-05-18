@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var leftCurrency: Currency
     @State var leftAmount = ""
+    @State var rightCurrency: Currency
     @State var rightAmount = ""
     
     var body: some View {
@@ -32,16 +34,15 @@ struct ContentView: View {
                 HStack {
                     VStack {
                         HStack {
-                            Image("silverpiece")
+                            leftCurrency.image
                                 .resizable()
                                 .scaledToFit()
                                 .frame(height: 33)
                             
-                            Text("Silver Piece")
+                            Text(leftCurrency.title)
                                 .font(.headline)
                                 .foregroundColor(.white)
                         }
-                        .padding(.bottom, -2.5)
                         
                         TextField("Amount", text: $leftAmount)
                             .padding(5)
@@ -56,16 +57,15 @@ struct ContentView: View {
                     
                     VStack {
                         HStack {
-                            Text("Gold Piece")
+                            Text(rightCurrency.title)
                                 .font(.headline)
                                 .foregroundColor(.white)
                             
-                            Image("goldpiece")
+                            rightCurrency.image
                                 .resizable()
                                 .scaledToFit()
                                 .frame(height: 33)
                         }
-                        .padding(.bottom, -2.5)
                         
                         TextField("Amount", text: $rightAmount)
                             .padding(5)
@@ -102,6 +102,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(leftCurrency: .copperPenny, rightCurrency: .goldPenny)
     }
 }
