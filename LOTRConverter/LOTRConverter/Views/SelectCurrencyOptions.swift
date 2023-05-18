@@ -20,14 +20,15 @@ struct SelectCurrencyOptions: View {
                                             .stroke(lineWidth: 3)
                                             .opacity(0.5))
                                 .shadow(color: .black, radius: 6)
-                                .onTapGesture {
-                                    selectedCurrency = Currency.allCases[caseIndex]
-                                }
                 } else {
                     SelectCurrencyOptionsTab(currency: Currency.allCases[caseIndex])
+                        .onTapGesture {
+                            selectedCurrency = Currency.allCases[caseIndex]
+                        }
                 }
             }
         }
+        .padding([.bottom, .leading, .trailing])
     }
 }
 

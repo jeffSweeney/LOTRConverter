@@ -25,14 +25,12 @@ struct SelectCurrency: View {
                     .multilineTextAlignment(.center)
                 
                 SelectCurrencyOptions(selectedCurrency: $leftCurrency)
-                    .padding([.bottom, .leading, .trailing])
                 
                 Text(LOTRConverterStrings.SelectCurrency.convertTo)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                 
                 SelectCurrencyOptions(selectedCurrency: $rightCurrency)
-                    .padding([.bottom, .leading, .trailing])
                 
                 Button("Done") {
                     dismissPage()
