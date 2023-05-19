@@ -42,7 +42,7 @@ struct ContentView: View {
                                 .frame(height: 33)
                             
                             Text(leftCurrency.title)
-                                .font(.headline)
+                                .font(.subheadline)
                                 .foregroundColor(.white)
                         }
                         .onTapGesture {
@@ -66,7 +66,7 @@ struct ContentView: View {
                     VStack {
                         HStack {
                             Text(rightCurrency.title)
-                                .font(.headline)
+                                .font(.subheadline)
                                 .foregroundColor(.white)
                             
                             rightCurrency.image
