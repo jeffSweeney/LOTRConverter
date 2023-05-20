@@ -43,4 +43,17 @@ enum Currency: Double, CaseIterable {
             return "Gold Piece"
         }
     }
+    
+    func convertMyCurrency(of: Double, to: Currency) -> Double {
+        // Capture percentage of the portion.
+        // i.e. if self is .silverPenny and we want to convert from 32 of them, portion is 0.5. If we're
+        //      converting to .goldPenny, we can multiply by the 0.5. Therefore 32 .silverPenny is 4 .goldPenny.
+        let normalizedMyPortion = of / self.rawValue
+        let normalizedToPortion = to.rawValue * normalizedMyPortion
+        
+        // TODO: Rounded to 2 decimal places?
+//        return round(normalizedToPortion * 100) / 100.0
+        
+        return normalizedToPortion
+    }
 }
