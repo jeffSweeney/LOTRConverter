@@ -44,11 +44,16 @@ enum Currency: Double, CaseIterable {
         }
     }
     
-    func convertMyCurrency(of: Double, to: Currency) -> Double {
+    func convertMyCurrency(of: String, to: Currency) -> Double {
+        guard let myAmount = Double(of) else {
+            // This should never be reached with numpad keyboard build in app
+            fatalError("Cannot convert \(of) to a Double")
+        }
+        
         // Capture percentage of the portion.
         // i.e. if self is .silverPenny and we want to convert from 32 of them, portion is 0.5. If we're
         //      converting to .goldPenny, we can multiply by the 0.5. Therefore 32 .silverPenny is 4 .goldPenny.
-        let normalizedMyPortion = of / self.rawValue
+        let normalizedMyPortion = myAmount / self.rawValue
         let normalizedToPortion = to.rawValue * normalizedMyPortion
         
         // TODO: Rounded to 2 decimal places?
