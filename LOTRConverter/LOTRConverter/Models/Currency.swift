@@ -56,9 +56,6 @@ enum Currency: Double, CaseIterable {
         let normalizedMyPortion = myAmount / self.rawValue
         let normalizedToPortion = to.rawValue * normalizedMyPortion
         
-        // TODO: Rounded to 2 decimal places?
-//        return round(normalizedToPortion * 100) / 100.0
-        
-        return String(normalizedToPortion)
+        return String(format: "%.2f", normalizedToPortion)
     }
 }
