@@ -44,7 +44,7 @@ enum Currency: Double, CaseIterable {
         }
     }
     
-    func convertMyCurrency(of: String, to: Currency) -> Double {
+    func convertMyCurrency(of: String, to: Currency) -> String {
         guard let myAmount = Double(of) else {
             // This should never be reached with numpad keyboard build in app
             fatalError("Cannot convert \(of) to a Double")
@@ -59,6 +59,6 @@ enum Currency: Double, CaseIterable {
         // TODO: Rounded to 2 decimal places?
 //        return round(normalizedToPortion * 100) / 100.0
         
-        return normalizedToPortion
+        return String(normalizedToPortion)
     }
 }
