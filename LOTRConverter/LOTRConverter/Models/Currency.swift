@@ -46,8 +46,7 @@ enum Currency: Double, CaseIterable {
     
     func convertMyCurrency(of: String, to: Currency) -> String {
         guard let myAmount = Double(of) else {
-            // This should never be reached with numpad keyboard build in app
-            fatalError("Cannot convert \(of) to a Double")
+            return ""
         }
         
         // Capture percentage of the portion.

@@ -10,8 +10,12 @@ import SwiftUI
 struct ContentView: View {
     @State var leftCurrency: Currency
     @State var leftAmount = ""
+    @State var leftAmountTmp = ""
+    @State var leftIsTyping = false
     @State var rightCurrency: Currency
     @State var rightAmount = ""
+    @State var rightAmountTmp = ""
+    @State var rightIsTyping = false
     @State var showSelectCurrency = false
     @State var showExchangeInfo = false
     
@@ -52,10 +56,20 @@ struct ContentView: View {
                             SelectCurrency(leftCurrency: $leftCurrency, rightCurrency: $rightCurrency)
                         }
                         
-                        TextField("Amount", text: $leftAmount)
-                            .padding(5)
-                            .background(Color(.systemGray6))
-                            .cornerRadius(7)
+                        TextField("Amount", text: $leftAmount, onEditingChanged: { isTyping in
+                            leftIsTyping = isTyping
+                            leftAmountTmp = leftAmount
+                        })
+                        .padding(5)
+                        .background(Color(.systemGray6))
+                        .cornerRadius(7)
+                        .keyboardType(.decimalPad)
+                        .onChange(of: leftIsTyping ? leftAmount : leftAmountTmp) { _ in
+                            rightAmount = leftCurrency.convertMyCurrency(of: leftAmount, to: rightCurrency)
+                        }
+                        .onChange(of: leftCurrency) { _ in
+                            leftAmount = rightCurrency.convertMyCurrency(of: rightAmount, to: leftCurrency)
+                        }
                     }
                     .padding(.leading, 10)
                     
@@ -86,6 +100,13 @@ struct ContentView: View {
                             .background(Color(.systemGray6))
                             .cornerRadius(7)
                             .multilineTextAlignment(.trailing)
+                            .keyboardType(.decimalPad)
+                            .onChange(of: rightIsTyping ? rightAmount : rightAmountTmp) { _ in
+                                leftAmount = rightCurrency.convertMyCurrency(of: rightAmount, to: leftCurrency)
+                            }
+                            .onChange(of: rightCurrency) { _ in
+                                rightAmount = leftCurrency.convertMyCurrency(of: leftAmount, to: rightCurrency)
+                            }
                     }
                     .padding(.trailing, 10)
                 }
